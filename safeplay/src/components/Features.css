@@ -1,43 +1,87 @@
 @import '../colors.css';
 
 .features {
-    padding: 4rem 2rem;
-    background-color: var(--background-color-light);
-    text-align: center;
-  }
-  
-  .features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .feature-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .feature-item {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
-  
-  .feature-item .icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .feature-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .feature-item p {
-    font-size: 1rem;
-    color: var(--light-text-color);
-  }
+  padding: 4rem 2rem;
+  background-color: var(--background-color-light);
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cityInput {
+  margin-top: 5rem;
+}
+
+.feature-item .feature-name {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: var(--light-text-color);
+}
+
+/*uv-level info*/
+.uv-level-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.uv-level {
+  display: flex;
+  padding: 8px;
+  width: 160px;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  background-color: var(--uv-level-background);
+  border-radius: 8px;
+}
+
+.uv-description {
+  text-align: justify;
+  font-size: small;
+}
+
+.uv-pill {
+  display: inline-block;
+  width: 3rem;
+  height: 1rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+}
+
+.uv-pill.low {
+  background-color: var(--green-pill);
+}
+
+.uv-pill.medium {
+  background-color: var(--yellow-pill);
+}
+
+.uv-pill.high {
+  background-color: var(--red-pill);
+}
