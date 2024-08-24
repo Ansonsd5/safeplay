@@ -1,14 +1,21 @@
-@import '../../../colors.css';
+@import "../../../colors.css";
 
 .uv-tile {
   width: 200px;
   height: 250px;
   perspective: 1000px;
   cursor: pointer;
-  margin: 20px;
+  transition: all 0.5s ease-in;
 }
 
-.uv-tile .front, .uv-tile .back {
+.uv-tile:hover {
+  width: 100%;
+  z-index: 11;
+  height: 300px;
+}
+
+.uv-tile .front,
+.uv-tile .back {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -21,6 +28,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.6s;
   border-radius: 10px;
+  flex-direction: column;
+}
+
+.uv-tile .front h2 {
+  color: var(--logo-green);
 }
 
 .uv-tile .front {
@@ -28,8 +40,10 @@
 }
 
 .uv-tile .back {
-  background-color: var(--uv-tile-bg);
+  background-color: var(--logo-green);
   transform: rotateY(180deg);
+  padding: 1rem;
+  color: white;
 }
 
 .uv-tile.flipped .front {
@@ -38,4 +52,13 @@
 
 .uv-tile.flipped .back {
   transform: rotateY(0deg);
+}
+li,
+ul {
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+
+h3 {
+  margin: 0px;
 }

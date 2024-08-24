@@ -88,7 +88,7 @@ function Features() {
                                             <Checkbox checked={selectedCities.indexOf(city) > -1}/>
                                             <ListItemText primary={city}/>
                                         </MenuItem>
-                                    ))}>
+                                    ))}
                                 </Select>
                             </FormControl>
                         </Box>
@@ -112,7 +112,10 @@ function Features() {
                     </div>
                 </div>
             </section>
+            <section id='precaution' className='precaution'>
+            <h2 >General Precautions</h2>
             <UVPrecautions/>
+            </section>
         </>
     );
 }
