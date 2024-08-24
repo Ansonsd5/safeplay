@@ -20,15 +20,16 @@ function Features() {
     const cities = ['Tokyo', 'Shanghai', 'Delhi', 'Sydney'];
     const seasonLabels = ['summer', 'spring', 'winter', 'rainy', 'snow'];
     const melbourneCityData = {
-        'label': 'Melbourne',
-        'data': [6, 4, 2, 3, 1]
-    }
+        label: 'Melbourne',
+        data: [6, 4, 2, 3, 1],
+        // area: true,
+        // stack: stackCheckBox ? 'total' : ''
+    };
     const uvLevels = [
         {riskLevel: 'low', description: 'Low (1-3)'},
         {riskLevel: 'medium', description: 'Medium (4-6)'},
         {riskLevel: 'high', description: 'High (7-10)'},
     ];
-
     const [selectedCities, setSelectedCities] = useState([]);
     const [citiesData, setCitiesData] = useState([melbourneCityData]);
 
@@ -37,8 +38,10 @@ function Features() {
         const newSelectedCities = typeof value === 'string' ? value.split(',') : value;
         setSelectedCities(newSelectedCities);
         const updatedCityData = newSelectedCities.map(city => ({
-            'label': city,
-            'data': getCitySeasonData(city)
+            label: city,
+            data: getCitySeasonData(city),
+            // area: true,
+            // stack: stackCheckBox ? 'total' : ''
         }));
         setCitiesData([melbourneCityData, ...updatedCityData]);
     }
