@@ -92,7 +92,7 @@ function Features() {
             <div className="uv-level-info">
               {uvLevels.map((level, index) => (
                 <div key={index} className="uv-level">
-                  <span className={`uv-pill ${level.riskLevel}`}></span>{" "}
+                  <span className={`uv-pill ${level.riskLevel}`}></span>
                   {level.description}
                 </div>
               ))}
