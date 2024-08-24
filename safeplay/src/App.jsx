@@ -1,8 +1,8 @@
-import "./App.css";
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Footer from './components/Footer';
+import './App.css';
+import Header from './components/header/Header';
+import Features from './components/features/Features';
+import Hero from './components/hero/Hero';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
