@@ -23,9 +23,9 @@ function Features() {
         'data': [6, 4, 2, 3, 1]
     }
     const uvLevels = [
-        {riskLevel: "low", description: "Low (1-3)"},
-        {riskLevel: "medium", description: "Medium (4-6)"},
-        {riskLevel: "high", description: "High (7-10)"},
+        {riskLevel: 'low', description: 'Low (1-3)'},
+        {riskLevel: 'medium', description: 'Medium (4-6)'},
+        {riskLevel: 'high', description: 'High (7-10)'},
     ];
 
     const [selectedCities, setSelectedCities] = useState([]);
@@ -94,7 +94,7 @@ function Features() {
                         <p className='feature-name'>UV Index</p>
                         <div className='uv-level-info'>
                             {uvLevels.map((level, index) => (
-                                <div key={index} className="uv-level">
+                                <div key={index} className='uv-level'>
                                     <span className={`uv-pill ${level.riskLevel}`}></span>
                                     {level.description}
                                 </div>
