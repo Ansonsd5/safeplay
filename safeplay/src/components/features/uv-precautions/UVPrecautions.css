@@ -1,8 +1,6 @@
 .uv-precautions {
-  margin-left: 28px;
-  margin-right: 40px;
   display: flex;
-  max-width: calc(100% - 100px);
+  max-width: calc(100% - 50px);
   justify-content: center;
   align-items: center;
 }

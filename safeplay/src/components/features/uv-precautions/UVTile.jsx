@@ -1,17 +1,14 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import './UVTile.css';
 
-const UVTile = ({ index, type, precautions }) => {
+const UVTile = ({index, type, precautions}) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
-    // const handleFlip = () => {
-
-    //     setIsFlipped(!isFlipped);
-    // };
-
     return (
-        <div className={`uv-tile ${isFlipped ? 'flipped' : ''}`} onMouseEnter={()=>setIsFlipped(true)} onMouseLeave={()=>setIsFlipped(false)}>
-            <div className='front'>
+        <div className={`uv-tile ${isFlipped ? 'flipped' : ''}`}
+             onMouseEnter={() => setIsFlipped(true)}
+             onMouseLeave={() => setIsFlipped(false)}>
+            <div className={`front ${type}`}>
                 <h2>{index}</h2>
                 <p>{type}</p>
             </div>

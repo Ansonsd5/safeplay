@@ -23,12 +23,13 @@ function Features() {
         label: 'Melbourne',
         data: [6, 4, 2, 3, 1],
         // area: true,
-        // stack: stackCheckBox ? 'total' : ''
+        // stack: 'total'
     };
     const uvLevels = [
-        {riskLevel: 'low', description: 'Low (1-3)'},
-        {riskLevel: 'medium', description: 'Medium (4-6)'},
-        {riskLevel: 'high', description: 'High (7-10)'},
+        {riskLevel: 'low', description: 'Low (0-2)'},
+        {riskLevel: 'moderate', description: 'Moderate (3-5)'},
+        {riskLevel: 'high', description: 'High (6-7)'},
+        {riskLevel: 'very-high', description: 'Very High (8-10)'},
     ];
     const [selectedCities, setSelectedCities] = useState([]);
     const [citiesData, setCitiesData] = useState([melbourneCityData]);
@@ -41,7 +42,7 @@ function Features() {
             label: city,
             data: getCitySeasonData(city),
             // area: true,
-            // stack: stackCheckBox ? 'total' : ''
+            // stack: 'total'
         }));
         setCitiesData([melbourneCityData, ...updatedCityData]);
     }
@@ -58,13 +59,14 @@ function Features() {
                                 {
                                     id: 'seasons',
                                     data: seasonLabels,
+                                    label: 'Seasons',
                                     scaleType: 'point',
                                 },
                             ]}
                             yAxis={[
                                 {
                                     id: 'uv-exposure',
-                                    label: 'UV exposure',
+                                    label: 'UV Index',
                                 },
                             ]}
                             series={citiesData}
@@ -116,8 +118,8 @@ function Features() {
                 </div>
             </section>
             <section id='precaution' className='precaution'>
-            <h2 >General Precautions</h2>
-            <UVPrecautions/>
+                <h2>Preventive measures for UV Levels</h2>
+                <UVPrecautions/>
             </section>
         </>
     );

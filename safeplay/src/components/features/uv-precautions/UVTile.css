@@ -9,7 +9,7 @@
 }
 
 .uv-tile:hover {
-  width: 100%;
+  width: 60%;
   z-index: 11;
   height: 300px;
 }
@@ -31,19 +31,17 @@
   flex-direction: column;
 }
 
-.uv-tile .front h2 {
-  color: var(--logo-green);
-}
-
-.uv-tile .front {
-  background-color: var(--uv-level-background);
+.uv-tile .front h2,
+.uv-tile .front p {
+  color: white;
+  margin: 0;
+  text-transform: capitalize;
 }
 
 .uv-tile .back {
-  background-color: var(--logo-green);
+  background-color: white;
   transform: rotateY(180deg);
-  padding: 1rem;
-  color: white;
+  color: black;
 }
 
 .uv-tile.flipped .front {
@@ -53,12 +51,13 @@
 .uv-tile.flipped .back {
   transform: rotateY(0deg);
 }
+
 li,
 ul {
-  list-style-type: none;
+  text-align: left;
   font-size: 1.1rem;
 }
 
 h3 {
-  margin: 0px;
+  margin: 0;
 }

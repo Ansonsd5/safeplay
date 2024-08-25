@@ -28,7 +28,7 @@
 }
 
 .cityInput {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .feature-item .feature-name {
@@ -59,7 +59,7 @@
 .uv-level {
   display: flex;
   padding: 8px;
-  width: 160px;
+  width: 180px;
   align-items: center;
   margin-bottom: 0.5rem;
   background-color: var(--uv-level-background);
@@ -79,24 +79,28 @@
   margin-right: 0.5rem;
 }
 
-.uv-pill.low {
-  background-color: var(--green-pill);
+.low {
+  background-color: var(--low-pill);
 }
 
-.uv-pill.medium {
-  background-color: var(--yellow-pill);
+.moderate {
+  background-color: var(--moderate-pill);
 }
 
-.uv-pill.high {
-  background-color: var(--red-pill);
+.high {
+  background-color: var(--high-pill);
 }
 
-.precaution  h2{
+.very-high {
+  background-color: var(--very-high-pill);
+}
+
+.precaution h2 {
   color: var(--button-text-color);
   text-align: center;
   font-size: 2.5rem;
 }
 
 .precaution {
-padding-bottom: 5rem;
+  padding-bottom: 5rem;
 }
