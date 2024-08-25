@@ -4,6 +4,7 @@ import {Box, Checkbox, FormControl, ListItemText, MenuItem, Select} from '@mui/m
 import {memo, useState} from 'react';
 import UVPrecautions from './uv-precautions/UVPrecautions.jsx';
 import AllergicAwareness from '../allergicAwareness';
+import HayfeverTriggers from "@/components/features/hayfever-triggers/index.jsx";
 
 function Features() {
     // TODO: get from API?
@@ -127,6 +128,10 @@ function Features() {
                 <div className='allergic-rhinitis'>
                     <h2>Awareness of Allergic Rhinitis (Hay fever)</h2>
                     <AllergicAwareness />
+                </div>
+                <div className='prevent-hay-fever'>
+                    <h2>Common Hay fever Triggers & Prevention</h2>
+                    <HayfeverTriggers/>
                 </div>
             </section>
         </>

@@ -1,0 +1,66 @@
+.hayfever-triggers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trigger-card {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--background-color-light);
+  color: var(--background-color-dark);
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.trigger-card.reduced-opacity {
+  opacity: 0.5;
+}
+
+.trigger-icon {
+  height: 135px;
+  width: 200px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+.trigger-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.minimisation-tips-title {
+  font-size: 2rem;
+}
+
+.minimisation-tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.minimisation-card {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--background-color-light);
+  color: var(--background-color-dark);
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  text-align: center;
+}
+
+.minimisation-icon {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.minimisation-description {
+  margin-top: 0.5rem;
+  font-size: 14px;
+}
