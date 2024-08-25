@@ -23,14 +23,14 @@ import largeIndustrialFan from "./hay-fever-trigger/mould-minimisation/large-ind
 import plumbingProfessional from "./hay-fever-trigger/mould-minimisation/plumbing-professional.avif";
 import womanLayingBed from "./hay-fever-trigger/mould-minimisation/woman-laying-bed.jpg";
 
-import foldingClothes from './hay-fever-trigger/dust-minimisation/female-holding-folded-clothes.jpg';
-import ladyInsideApartment from './hay-fever-trigger/dust-minimisation/lady-inside-modern-apartment.jpg';
-import girlPlaying from './hay-fever-trigger/dust-minimisation/little-girl-playing-with-toys.avif';
-import manCleaning from './hay-fever-trigger/dust-minimisation/man-cleaning-his-home.jpg';
-import windowCurtains from './hay-fever-trigger/dust-minimisation/window-curtains.jpg';
+import foldingClothes from "./hay-fever-trigger/dust-minimisation/female-holding-folded-clothes.jpg";
+import ladyInsideApartment from "./hay-fever-trigger/dust-minimisation/lady-inside-modern-apartment.jpg";
+import girlPlaying from "./hay-fever-trigger/dust-minimisation/little-girl-playing-with-toys.avif";
+import manCleaning from "./hay-fever-trigger/dust-minimisation/man-cleaning-his-home.jpg";
+import windowCurtains from "./hay-fever-trigger/dust-minimisation/window-curtains.jpg";
 
-import dogPlayingWithKid from './hay-fever-trigger/pet-dander-minimisation/dog-playing-with-kid.jpg';
-import washingPetDog from './hay-fever-trigger/pet-dander-minimisation/washing-pet-dog-home.jpg';
+import dogPlayingWithKid from "./hay-fever-trigger/pet-dander-minimisation/dog-playing-with-kid.jpg";
+import washingPetDog from "./hay-fever-trigger/pet-dander-minimisation/washing-pet-dog-home.jpg";
 
 export {
   nasal,
@@ -54,5 +54,11 @@ export {
   largeIndustrialFan,
   plumbingProfessional,
   womanLayingBed,
-  foldingClothes,ladyInsideApartment,girlPlaying,manCleaning,windowCurtains,dogPlayingWithKid,washingPetDog
+  foldingClothes,
+  ladyInsideApartment,
+  girlPlaying,
+  manCleaning,
+  windowCurtains,
+  dogPlayingWithKid,
+  washingPetDog,
 };
