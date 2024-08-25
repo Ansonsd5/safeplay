@@ -1,15 +1,8 @@
 import React from "react";
-import nasal from "../../assets/images/allergicImage/nasal-stuffiness.png";
-import headache from "../../assets/images/allergicImage/headache-sinus.png";
-import wheezing from "../../assets/images/allergicImage/wheezing.png";
-import tiredness from "../../assets/images/allergicImage/tiredness.png";
-import sorethroat from "../../assets/images/allergicImage/sore-throat.png";
-import redwateryeye from "../../assets/images/allergicImage/red-watery-eyes.png";
-import moremucus from "../../assets/images/allergicImage/more-mucus.png";
-import itchy from "../../assets/images/allergicImage/itchy-nose.png";
 import {styled, Tooltip} from "@mui/material";
 import {tooltipClasses} from "@mui/material/Tooltip";
 import "./index.css";
+import { headache, itchy, moremucus, nasal, redwateryeye, sorethroat, tiredness, wheezing } from "@/assets/images";
 
 const CustomWidthTooltip = styled(({className, ...props}) => (
     <Tooltip {...props} classes={{popper: className}}/>
