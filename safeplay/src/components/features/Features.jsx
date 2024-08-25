@@ -49,10 +49,10 @@ function Features() {
 
     return (
         <>
-            <section id='features' className='features'>
-                <h2>Features</h2>
-                <div className='feature-list'>
-                    <div className='feature-item'>
+            <section className='features'>
+                <h2>Epic 1 Features</h2>
+                <div className='uv-radiation'>
+                    <div className='uv-left-section'>
                         <p className='feature-name'>Compare UV Exposure</p>
                         <LineChart
                             xAxis={[
@@ -116,10 +116,16 @@ function Features() {
                         </div>
                     </div>
                 </div>
+                <div className='uv-precautions'>
+                    <h2>Preventive measures for UV Levels</h2>
+                    <UVPrecautions/>
+                </div>
             </section>
-            <section id='precaution' className='precaution'>
-                <h2>Preventive measures for UV Levels</h2>
-                <UVPrecautions/>
+            <section className='features'>
+                <h2>Epic 2 Features</h2>
+                <div className='allergic-rhinitis'>
+                    <h2>Awareness of Allergic Rhinitis (Hay fever)</h2>
+                </div>
             </section>
         </>
     );

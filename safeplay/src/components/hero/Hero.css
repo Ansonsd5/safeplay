@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   height: 80vh;
-  background: var(--background-color) no-repeat center center/cover;
+  background: var(--background-color-dark) no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 2rem;

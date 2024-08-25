@@ -11,7 +11,7 @@ const UVPrecautions = () => {
     ];
 
     return (
-        <div className='uv-precautions'>
+        <div className='uv-levels'>
             {uvData.map((data, index) => (
                 <UVTile key={index}
                         index={data.index}
