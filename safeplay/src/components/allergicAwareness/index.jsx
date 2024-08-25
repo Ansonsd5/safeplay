@@ -76,7 +76,6 @@ const AllergicAwareness = () => {
       {symptoms.map((symptom, key) => (
         <div className="awareness-card" key={key}>
           <CustomWidthTooltip
-            className="card-description"
             title={symptom.description}
             arrow
             placement="top"
