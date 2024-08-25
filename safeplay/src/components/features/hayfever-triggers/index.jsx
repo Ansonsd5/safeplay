@@ -1,13 +1,4 @@
 import './index.css'
-
-// mould minimisation images
-
-
-// dust minimisation images
-
-
-// pet dander minimisation images
-
 import {useEffect, useRef, useState} from "react";
 import {Tooltip} from "@mui/material";
 import { dogPlayingWithKid, dust, foldingClothes, girlPlaying, ladyInsideApartment, largeIndustrialFan, manCleaning, manDisinfecting, medicinePills, modernAirPurifier, mould, petDander, plumbingProfessional, pollen, washingPetDog, windowCurtains, windowWithBlinds, womanLayingBed, womenPractisingSelfCare, womenWithMask } from '@/assets/images';

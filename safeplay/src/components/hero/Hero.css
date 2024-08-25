@@ -9,12 +9,28 @@
   background: var(--background-color-dark) no-repeat center center/cover;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+.hero-block {
+  background-color: var(--hero-block-bg);
+  color: var(--hero-block-text);
+  border-radius: 1rem;
+  padding: 4rem;
+}
+
+.hero-block h1 {
+  transform: perspective(1500px) rotateX(0deg);
+  transition: all 1s ease;
+}
+
+.hero-block h1:hover {
+  transform: perspective(3000px) rotateX(360deg);
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .hero p {
@@ -30,7 +46,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .hero button:hover {

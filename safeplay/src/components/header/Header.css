@@ -1,7 +1,8 @@
 @import '../../colors.css';
 
 .header {
-    border-radius: 1rem;
+  border-radius: 1rem;
+  margin: 2rem 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,8 +12,19 @@
 }
 
 .header .logo {
+  display: flex;
+  gap: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
+  align-items: center;
+}
+
+.logo h2 {
+  margin: 0;
+}
+
+.logo img {
+  height: 80px;
 }
 
 .header nav ul {
