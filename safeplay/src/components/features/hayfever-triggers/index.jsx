@@ -1,34 +1,16 @@
-import dust from '../../../assets/images/hay-fever-trigger/house-dust.png';
-import mould from '../../../assets/images/hay-fever-trigger/mould.png';
-import petDander from '../../../assets/images/hay-fever-trigger/pet-dander.png';
-import pollen from '../../../assets/images/hay-fever-trigger/pollen.png';
 import './index.css'
 
-// pollen minimisation images
-import windowWithBlinds from '../../../assets/images/hay-fever-trigger/pollen-minimisation/window-with-blinds.avif';
-import womenPractisingSelfCare from '../../../assets/images/hay-fever-trigger/pollen-minimisation/woman-practicing-selfcare.jpg';
-import womenWithMask from '../../../assets/images/hay-fever-trigger/pollen-minimisation/woman-with-mask.jpg';
-import medicinePills from '../../../assets/images/hay-fever-trigger/pollen-minimisation/medicine-pills.jpg';
-import modernAirPurifier from '../../../assets/images/hay-fever-trigger/pollen-minimisation/modern-air-purifier.jpg';
-
 // mould minimisation images
-import manDisinfecting from '../../../assets/images/hay-fever-trigger/mould-minimisation/man-disinfecting.avif';
-import largeIndustrialFan from '../../../assets/images/hay-fever-trigger/mould-minimisation/large-industrial-fan.avif';
-import plumbingProfessional from '../../../assets/images/hay-fever-trigger/mould-minimisation/plumbing-professional.avif';
-import womanLayingBed from '../../../assets/images/hay-fever-trigger/mould-minimisation/woman-laying-bed.jpg';
+
 
 // dust minimisation images
-import foldingClothes from '../../../assets/images/hay-fever-trigger/dust-minimisation/female-holding-folded-clothes.jpg';
-import ladyInsideApartment from '../../../assets/images/hay-fever-trigger/dust-minimisation/lady-inside-modern-apartment.jpg';
-import girlPlaying from '../../../assets/images/hay-fever-trigger/dust-minimisation/little-girl-playing-with-toys.avif';
-import manCleaning from '../../../assets/images/hay-fever-trigger/dust-minimisation/man-cleaning-his-home.jpg';
-import windowCurtains from '../../../assets/images/hay-fever-trigger/dust-minimisation/window-curtains.jpg';
+
 
 // pet dander minimisation images
-import dogPlayingWithKid from '../../../assets/images/hay-fever-trigger/pet-dander-minimisation/dog-playing-with-kid.jpg';
-import washingPetDog from '../../../assets/images/hay-fever-trigger/pet-dander-minimisation/washing-pet-dog-home.jpg';
+
 import {useEffect, useRef, useState} from "react";
 import {Tooltip} from "@mui/material";
+import { dogPlayingWithKid, dust, foldingClothes, girlPlaying, ladyInsideApartment, largeIndustrialFan, manCleaning, manDisinfecting, medicinePills, modernAirPurifier, mould, petDander, plumbingProfessional, pollen, washingPetDog, windowCurtains, windowWithBlinds, womanLayingBed, womenPractisingSelfCare, womenWithMask } from '@/assets/images';
 
 function HayfeverTriggers() {
     const triggerData = [
