@@ -135,7 +135,7 @@ function HayfeverTriggers() {
     return (<>
             <div className='hayfever-triggers'>
                 {triggerData.map((trigger, index) => (
-                    <Tooltip title={selectedTrigger && selectedTrigger.label === trigger.label ? 'Close Tips' : `Click to know ${trigger.label} minimisation tips`}
+                    <Tooltip title={selectedTrigger && selectedTrigger.label === trigger.label ? 'Click to Close Tips' : `Click to know ${trigger.label} minimisation tips`}
                              arrow
                              placement="bottom"
                              key={index}>
