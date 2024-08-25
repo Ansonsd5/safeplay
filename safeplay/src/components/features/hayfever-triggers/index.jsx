@@ -28,6 +28,7 @@ import windowCurtains from '../../../assets/images/hay-fever-trigger/dust-minimi
 import dogPlayingWithKid from '../../../assets/images/hay-fever-trigger/pet-dander-minimisation/dog-playing-with-kid.jpg';
 import washingPetDog from '../../../assets/images/hay-fever-trigger/pet-dander-minimisation/washing-pet-dog-home.jpg';
 import {useEffect, useRef, useState} from "react";
+import {Tooltip} from "@mui/material";
 
 function HayfeverTriggers() {
     const triggerData = [
@@ -127,25 +128,30 @@ function HayfeverTriggers() {
 
     useEffect(() => {
         if (selectedTrigger && minimisationRef.current) {
-            minimisationRef.current.scrollIntoView({ behavior: 'smooth' });
+            minimisationRef.current.scrollIntoView({behavior: 'smooth'});
         }
     }, [selectedTrigger]);
 
     return (<>
             <div className='hayfever-triggers'>
                 {triggerData.map((trigger, index) => (
-                    <div key={index}
-                         className={`trigger-card ${selectedTrigger && selectedTrigger.label !== trigger.label ? 'reduced-opacity' : ''}`}
-                         onClick={() => {
-                             if (selectedTrigger && selectedTrigger.label === trigger.label) {
-                                 setSelectedTrigger(null);
-                             } else {
-                                 setSelectedTrigger(trigger);
-                             }
-                         }}>
-                        <img src={trigger.image} alt={trigger.label} className='trigger-icon'/>
-                        <div className='trigger-label'>{trigger.label}</div>
-                    </div>
+                    <Tooltip title={`Click to know ${trigger.label} minimisation tips`}
+                             arrow
+                             placement="bottom"
+                             key={index}>
+                        <div key={index}
+                             className={`trigger-card ${selectedTrigger && selectedTrigger.label !== trigger.label ? 'reduced-opacity' : ''}`}
+                             onClick={() => {
+                                 if (selectedTrigger && selectedTrigger.label === trigger.label) {
+                                     setSelectedTrigger(null);
+                                 } else {
+                                     setSelectedTrigger(trigger);
+                                 }
+                             }}>
+                            <img src={trigger.image} alt={trigger.label} className='trigger-icon'/>
+                            <div className='trigger-label'>{trigger.label}</div>
+                        </div>
+                    </Tooltip>
                 ))}
             </div>
             {selectedTrigger && (
