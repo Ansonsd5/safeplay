@@ -1,21 +1,24 @@
-@import '../../colors.css';
+@import "../../colors.css";
 
 .allergic-awareness-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px; 
-  }
-
-.awareness-card{
-padding: 0.5rem;
-border-radius: 8px;
-background-color: var(--background-color-light);
-color: var(--background-color-dark);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
 }
 
-.card-title{
-    font-size: 20px;
-    font-weight: bold;
+.awareness-card {
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--background-color-light);
+  color: var(--background-color-dark);
 }
 
+.symptom-icon {
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
 
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}

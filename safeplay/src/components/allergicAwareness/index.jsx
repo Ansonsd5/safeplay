@@ -81,7 +81,7 @@ const AllergicAwareness = () => {
             arrow
             placement="top"
           >
-            <img src={symptom.icon} alt={`symptom${key}`} />
+            <img src={symptom.icon} alt={`symptom${key}`} className="symptom-icon" />
             <div className="card-title">{symptom.title}</div>
           </CustomWidthTooltip>
         </div>
