@@ -3,6 +3,7 @@ import './Features.css';
 import {Box, Checkbox, FormControl, ListItemText, MenuItem, Select} from '@mui/material';
 import {memo, useState} from 'react';
 import UVPrecautions from './uv-precautions/UVPrecautions.jsx';
+import AllergicAwareness from '../allergicAwareness';
 
 function Features() {
     // TODO: get from API?
@@ -125,6 +126,7 @@ function Features() {
                 <h2>Epic 2 Features</h2>
                 <div className='allergic-rhinitis'>
                     <h2>Awareness of Allergic Rhinitis (Hay fever)</h2>
+                    <AllergicAwareness />
                 </div>
             </section>
         </>
