@@ -7,6 +7,7 @@
   justify-content: center;
   padding: 4rem 2rem;
   text-align: center;
+  border-radius: 1rem;
 }
 
 .features:nth-child(odd) {

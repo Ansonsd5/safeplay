@@ -1,18 +1,37 @@
-import './App.css';
-import Header from './components/header/Header';
-import Features from './components/features/Features';
-import Hero from './components/hero/Hero';
-import Footer from './components/footer/Footer';
+import "./App.css";
+import Features from "./components/features/Features";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AppLayout from "./components/appLayout";
+
+
+import Home from "./components/home";
+import AwarenessCard from "./components/features/awarenessCard";
 
 function App() {
-  return (
-    <div className='App'>
-      <Header />
-      <Hero />
-      <Features />
-      <Footer />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/uv-exposure",
+          element: <Features />,
+        },
+        {
+          path: "/allergic-awareness",
+          element: <AwarenessCard/>,
+        },
+        {
+          path: "*",
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;

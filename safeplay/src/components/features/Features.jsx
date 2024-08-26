@@ -122,18 +122,7 @@ function Features() {
                     <h2>Preventive measures for UV Levels</h2>
                     <UVPrecautions/>
                 </div>
-            </section>
-            <section className='features'>
-                <h2>Epic 2 Features</h2>
-                <div className='allergic-rhinitis'>
-                    <h2>Awareness of Allergic Rhinitis (Hay fever)</h2>
-                    <AllergicAwareness/>
-                </div>
-                <div className='prevent-hay-fever'>
-                    <h2>Common Hay fever Triggers & Prevention</h2>
-                    <HayfeverTriggers/>
-                </div>
-            </section>
+            </section>           
         </>
     );
 }

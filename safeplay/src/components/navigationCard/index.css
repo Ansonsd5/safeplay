@@ -1,0 +1,30 @@
+.feature-btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.feature-btn-wrapper > .navigation-container {
+    background-color: var(--hero-block-bg);
+    color: var(--hero-block-text);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.feature-btn-wrapper > .navigation-container > button{
+   width: fit-content;
+   margin: 0px auto;
+
+}
+
+
+
+
+
+

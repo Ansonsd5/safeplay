@@ -3,6 +3,7 @@ import {styled, Tooltip} from "@mui/material";
 import {tooltipClasses} from "@mui/material/Tooltip";
 import "./index.css";
 import { headache, itchy, moremucus, nasal, redwateryeye, sorethroat, tiredness, wheezing } from "@/assets/images";
+import HayfeverTriggers from "../features/hayfever-triggers";
 
 const CustomWidthTooltip = styled(({className, ...props}) => (
     <Tooltip {...props} classes={{popper: className}}/>
