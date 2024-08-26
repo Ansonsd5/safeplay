@@ -18,31 +18,28 @@ function Features() {
         return data;
     }
 
+    // Function to determine UV risk level
+    function getUVRiskLevel(uvIndex) {
+        if (uvIndex <= 2) return 'Low';
+        if (uvIndex <= 5) return 'Moderate';
+        if (uvIndex <= 7) return 'High';
+        return 'Very High';
+    }
+
     // TODO: get from API?
     const cities = ['Tokyo', 'Shanghai', 'Delhi', 'Sydney'];
     const seasonLabels = ['summer', 'spring', 'winter', 'rainy', 'snow'];
     const melbourneCityData = {
         label: 'Melbourne',
         data: [6, 4, 2, 3, 1],
-        // area: true,
-        // stack: 'total'
+        valueFormatter: (v) => {
+            return `UV Index ${v} is ${getUVRiskLevel(v)}`;
+        },
     };
-    // const uvLevels = [
-    //     {riskLevel: 'low', description: 'Low (0-2)'},
-    //     {riskLevel: 'moderate', description: 'Moderate (3-5)'},
-    //     {riskLevel: 'high', description: 'High (6-7)'},
-    //     {riskLevel: 'very-high', description: 'Very High (8-10)'},
-    // ];
+
     const [selectedCities, setSelectedCities] = useState([]);
     const [citiesData, setCitiesData] = useState([melbourneCityData]);
 
-    // // Function to determine UV risk level
-    // function getUVRiskLevel(uvIndex) {
-    //     if (uvIndex <= 2) return 'Low';
-    //     if (uvIndex <= 5) return 'Moderate';
-    //     if (uvIndex <= 7) return 'High';
-    //     return 'Very High';
-    // }
 
     function handleCityChange(event) {
         const {target: {value}} = event;
@@ -51,8 +48,9 @@ function Features() {
         const updatedCityData = newSelectedCities.map(city => ({
             label: city,
             data: getCitySeasonData(city),
-            // area: true,
-            // stack: 'total'
+            valueFormatter: (v) => {
+                return `UV Index ${v} is ${getUVRiskLevel(v)}`;
+            },
         }));
         setCitiesData([melbourneCityData, ...updatedCityData]);
     }
@@ -108,17 +106,6 @@ function Features() {
                                     </Select>
                                 </FormControl>
                             </Box>
-                            {/*<div className='uv-info'>*/}
-                            {/*    <p className='feature-name'>UV Index</p>*/}
-                            {/*    <div className='uv-level-info'>*/}
-                            {/*        {uvLevels.map((level, index) => (*/}
-                            {/*            <div key={index} className='uv-level'>*/}
-                            {/*                <span className={`uv-pill ${level.riskLevel}`}></span>*/}
-                            {/*                {level.description}*/}
-                            {/*            </div>*/}
-                            {/*        ))}*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                     <p className='uv-description'>
