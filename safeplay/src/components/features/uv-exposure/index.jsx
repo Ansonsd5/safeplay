@@ -1,12 +1,10 @@
 import {LineChart} from '@mui/x-charts';
-import './Features.css';
+import './index.css';
 import {Box, Checkbox, FormControl, ListItemText, MenuItem, Select} from '@mui/material';
 import {memo, useState} from 'react';
-import UVPrecautions from './uv-precautions/UVPrecautions.jsx';
-import AllergicAwareness from '../allergicAwareness';
-import HayfeverTriggers from "@/components/features/hayfever-triggers/index.jsx";
+import UVPrecautions from '../uv-precautions/index.jsx';
 
-function Features() {
+function UVExposure() {
     // TODO: get from API?
     // {summer: 6, spring: 4, winter: 2, rainy: 3, snow: 1};
     function getCitySeasonData(city) {
@@ -58,7 +56,7 @@ function Features() {
     return (
         <>
             <section className='features'>
-                <h2>Epic 1 Features</h2>
+                <h2>Analyse Historical UV Radiation with your city</h2>
                 <div className='uv-radiation'>
                     <div className='uv-chart-city'>
                         <div className='uv-left-section'>
@@ -119,12 +117,12 @@ function Features() {
                     </div>
                 </div>
                 <div className='uv-precautions'>
-                    <h2>Preventive measures for UV Levels</h2>
+                    <h2>Preventive measures for different UV Levels</h2>
                     <UVPrecautions/>
                 </div>
-            </section>           
+            </section>
         </>
     );
 }
 
-export default memo(Features);
+export default memo(UVExposure);

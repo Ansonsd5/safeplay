@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './UVTile.css';
+import './index.css';
 
 const UVTile = ({index, type, precautions}) => {
     const [isFlipped, setIsFlipped] = useState(false);
