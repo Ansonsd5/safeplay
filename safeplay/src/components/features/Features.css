@@ -27,13 +27,19 @@
 .uv-radiation {
   width: 800px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2rem;
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.uv-chart-city {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .cityInput {
@@ -78,6 +84,19 @@
 .uv-description {
   text-align: justify;
   font-size: small;
+}
+
+.scroll-down {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--light-text-color);
+}
+
+.arrow-down {
+  display: block;
+  font-size: 2rem;
+  margin-top: 0.5rem;
 }
 
 .uv-pill {
