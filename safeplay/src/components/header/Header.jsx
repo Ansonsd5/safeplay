@@ -12,11 +12,7 @@ function Header() {
         </div>
       </Link>
       <nav>
-        <ul>
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-        </ul>
+          <Link to={"/"}>Home</Link>
       </nav>
     </header>
   );

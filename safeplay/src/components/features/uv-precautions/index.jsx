@@ -1,5 +1,5 @@
-import UVTile from './UVTile';
-import './UVPrecautions.css';
+import UVTile from './uv-tile/index.jsx';
+import './index.css';
 
 const UVPrecautions = () => {
     const uvData = [

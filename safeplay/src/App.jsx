@@ -1,8 +1,7 @@
 import "./App.css";
-import Features from "./components/features/Features";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import UVExposure from "./components/features/uv-exposure/index.jsx";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import AppLayout from "./components/appLayout";
-
 
 import Home from "./components/home";
 import AwarenessCard from "./components/features/awarenessCard";
@@ -18,7 +17,7 @@ function App() {
         },
         {
           path: "/uv-exposure",
-          element: <Features />,
+            element: <UVExposure/>,
         },
         {
           path: "/allergic-awareness",

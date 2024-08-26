@@ -7,9 +7,9 @@ function Hero() {
             <div className="hero-block">
                 <h1>Welcome to Safe Play</h1>
                 <p>Good Health and Wellbeing for Children of Immigration Family</p>
-                <button onClick={() => window.open('https://www.youtube.com/watch?v=AD-kOozicZc', '_blank')} className='crazy-button'>
-                    Learn to protect your family
-                </button>
+                {/*<button onClick={() => window.open('https://www.youtube.com/watch?v=AD-kOozicZc', '_blank')} className='crazy-button'>*/}
+                {/*    Learn to protect your family*/}
+                {/*</button>*/}
             </div>
         </section>
     );

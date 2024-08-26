@@ -9,11 +9,11 @@ const AwarenessCard = () => {
       <section className="features">
         <h2>Awareness of Allergic Rhinitis (Hay fever) </h2>
         <div className="allergic-rhinitis">
-          <h2>Common Symptoms of Hay fever</h2>
+          <h2>Common Symptoms</h2>
           <AllergicAwareness />
         </div>
         <div className="prevent-hay-fever">
-          <h2>Common Hay fever Triggers & Prevention</h2>
+          <h2>Common Triggers & Prevention</h2>
           <HayfeverTriggers />
         </div>
       </section>
