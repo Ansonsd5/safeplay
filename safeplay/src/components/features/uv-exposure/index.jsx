@@ -4,6 +4,8 @@ import {Box, Checkbox, FormControl, ListItemText, MenuItem, Select} from '@mui/m
 import {memo, useState} from 'react';
 import UVPrecautions from '../uv-precautions/index.jsx';
 
+// UVExposure component that provides a historical analysis of UV radiation for selected cities
+// It includes a line chart to compare UV exposure across different seasons and a section for UV precautions
 function UVExposure() {
     // TODO: get from API?
     // {summer: 6, spring: 4, winter: 2, rainy: 3, snow: 1};
@@ -18,9 +20,15 @@ function UVExposure() {
 
     // Function to determine UV risk level
     function getUVRiskLevel(uvIndex) {
-        if (uvIndex <= 2) return 'Low';
-        if (uvIndex <= 5) return 'Moderate';
-        if (uvIndex <= 7) return 'High';
+        if (uvIndex <= 2) {
+            return 'Low';
+        }
+        if (uvIndex <= 5) {
+            return 'Moderate';
+        }
+        if (uvIndex <= 7) {
+            return 'High';
+        }
         return 'Very High';
     }
 
@@ -38,7 +46,7 @@ function UVExposure() {
     const [selectedCities, setSelectedCities] = useState([]);
     const [citiesData, setCitiesData] = useState([melbourneCityData]);
 
-
+    // Handle city selection change
     function handleCityChange(event) {
         const {target: {value}} = event;
         const newSelectedCities = typeof value === 'string' ? value.split(',') : value;
@@ -61,6 +69,7 @@ function UVExposure() {
                     <div className='uv-chart-city'>
                         <div className='uv-left-section'>
                             <p className='feature-name'>Compare UV Exposure</p>
+                            {/* Line chart to display UV exposure data */}
                             <LineChart
                                 xAxis={[
                                     {
@@ -85,6 +94,7 @@ function UVExposure() {
                         <div className='uv-right-section'>
                             <Box className='cityInput' sx={{minWidth: 150}}>
                                 <FormControl fullWidth>
+                                    {/* Dropdown to select cities */}
                                     <Select labelId='city-select-label'
                                             id='city-select'
                                             value={selectedCities}
@@ -118,6 +128,7 @@ function UVExposure() {
                 </div>
                 <div className='uv-precautions'>
                     <h2>Preventive measures for different UV Levels</h2>
+                    {/* Section for UV precautions */}
                     <UVPrecautions/>
                 </div>
             </section>

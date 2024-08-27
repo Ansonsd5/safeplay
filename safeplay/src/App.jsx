@@ -6,31 +6,34 @@ import AppLayout from "./components/appLayout";
 import Home from "./components/home";
 import AwarenessCard from "./components/features/awarenessCard";
 
+// Main App component with routing configuration
 function App() {
-  const router = createBrowserRouter([
-    {
-      element: <AppLayout />,
-      children: [
+
+    // Define the routes for the application
+    const router = createBrowserRouter([
         {
-          path: "/",
-          element: <Home />,
+            element: <AppLayout/>,
+            children: [
+                {
+                    path: "/",
+                    element: <Home/>,
+                },
+                {
+                    path: "/uv-exposure",
+                    element: <UVExposure/>,
+                },
+                {
+                    path: "/allergic-awareness",
+                    element: <AwarenessCard/>,
+                },
+                {
+                    path: "*",
+                    element: <Home/>,
+                },
+            ],
         },
-        {
-          path: "/uv-exposure",
-            element: <UVExposure/>,
-        },
-        {
-          path: "/allergic-awareness",
-          element: <AwarenessCard/>,
-        },
-        {
-          path: "*",
-          element: <Home />,
-        },
-      ],
-    },
-  ]);
-  return <RouterProvider router={router} />;
+    ]);
+    return <RouterProvider router={router}/>;
 }
 
 export default App;

@@ -2,8 +2,7 @@ import React from "react";
 import {styled, Tooltip} from "@mui/material";
 import {tooltipClasses} from "@mui/material/Tooltip";
 import "./index.css";
-import { headache, itchy, moremucus, nasal, redwateryeye, sorethroat, tiredness, wheezing } from "@/assets/images";
-import HayfeverTriggers from "../features/hayfever-triggers";
+import {headache, itchy, moremucus, nasal, redwateryeye, sorethroat, tiredness, wheezing} from "@/assets/images/index.js";
 
 const CustomWidthTooltip = styled(({className, ...props}) => (
     <Tooltip {...props} classes={{popper: className}}/>
@@ -14,6 +13,7 @@ const CustomWidthTooltip = styled(({className, ...props}) => (
     },
 });
 
+// Data for common symptoms of Allergic Rhinitis
 const symptoms = [
     {
         title: "Nasal stuffiness, sneezing and runny nose",
@@ -64,9 +64,13 @@ const symptoms = [
             "In some cases, hay fever can cause the airways to narrow, leading to wheezing, coughing, and shortness of breath, especially in individuals with asthma.",
     },
 ];
+
+// AllergicAwareness component that provides information about common symptoms of Allergic Rhinitis (Hay fever)
+// It includes tooltips for each symptom with detailed descriptions
 const AllergicAwareness = () => {
     return (
         <div className="allergic-awareness-container">
+            {/* Display cards for each symptom with tooltips */}
             {symptoms.map((symptom, key) => (
                 <div className="awareness-card" key={key}>
                     <CustomWidthTooltip
