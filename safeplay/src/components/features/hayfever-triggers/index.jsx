@@ -1,9 +1,33 @@
 import './index.css'
 import {useEffect, useRef, useState} from "react";
 import {Tooltip} from "@mui/material";
-import { dogPlayingWithKid, dust, foldingClothes, girlPlaying, ladyInsideApartment, largeIndustrialFan, manCleaning, manDisinfecting, medicinePills, modernAirPurifier, mould, petDander, plumbingProfessional, pollen, washingPetDog, windowCurtains, windowWithBlinds, womanLayingBed, womenPractisingSelfCare, womenWithMask } from '@/assets/images';
+import {
+    dogPlayingWithKid,
+    dust,
+    foldingClothes,
+    girlPlaying,
+    ladyInsideApartment,
+    largeIndustrialFan,
+    manCleaning,
+    manDisinfecting,
+    medicinePills,
+    modernAirPurifier,
+    mould,
+    petDander,
+    plumbingProfessional,
+    pollen,
+    washingPetDog,
+    windowCurtains,
+    windowWithBlinds,
+    womanLayingBed,
+    womenPractisingSelfCare,
+    womenWithMask
+} from '@/assets/images';
 
+// HayfeverTriggers component that provides information about common hay fever triggers
+// It includes sections for different triggers and their minimisation tips
 function HayfeverTriggers() {
+    // Data for different hay fever triggers and their minimisation tips
     const triggerData = [
         {
             label: 'Pollen',
@@ -99,6 +123,7 @@ function HayfeverTriggers() {
     const [selectedTrigger, setSelectedTrigger] = useState(null);
     const minimisationRef = useRef(null);
 
+    // Scroll to minimisation tips when a trigger is selected
     useEffect(() => {
         if (selectedTrigger && minimisationRef.current) {
             minimisationRef.current.scrollIntoView({behavior: 'smooth'});
@@ -107,17 +132,21 @@ function HayfeverTriggers() {
 
     return (<>
             <div className='hayfever-triggers'>
+                {/* Display trigger cards */}
                 {triggerData.map((trigger, index) => (
-                    <Tooltip title={selectedTrigger && selectedTrigger.label === trigger.label ? 'Click to Close Tips' : `Click to know ${trigger.label} minimisation tips`}
+                    <Tooltip title={selectedTrigger && selectedTrigger.label === trigger.label ? 'Click to Close Tips'
+                        : `Click to know ${trigger.label} minimisation tips`}
                              arrow
                              placement="bottom"
                              key={index}>
                         <div key={index}
                              className={`trigger-card ${selectedTrigger && selectedTrigger.label !== trigger.label ? 'reduced-opacity' : ''}`}
                              onClick={() => {
+                                 // if clicked on already selected trigger, deselect it
                                  if (selectedTrigger && selectedTrigger.label === trigger.label) {
                                      setSelectedTrigger(null);
                                  } else {
+                                     // else select the trigger
                                      setSelectedTrigger(trigger);
                                  }
                              }}>
@@ -127,6 +156,7 @@ function HayfeverTriggers() {
                     </Tooltip>
                 ))}
             </div>
+            {/* Display minimisation tips for the selected trigger */}
             {selectedTrigger && (
                 <>
                     <p className='minimisation-tips-title' ref={minimisationRef}>{selectedTrigger.label} Minimisation Tips</p>
