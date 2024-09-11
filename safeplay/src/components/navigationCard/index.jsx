@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import {useNavigate} from 'react-router-dom'
+import {RangeGaugeComponent} from "@/components/rangeGauge/index.jsx";
 
 // NavigationCard component that provides navigation buttons to different features
 // It includes buttons for navigating to UV Exposure analysis and Allergic Rhinitis awareness
@@ -22,6 +23,23 @@ const NavigationCard = () => {
                     Symptoms & Prevention ➤
                 </button>
             </div>
+            <RangeGaugeComponent
+                value={5}
+                minValue={1}
+                maxValue={11}
+                currentValueText="UV Level"
+                // segments={3}
+                // segmentColors={['#FF9933', '#ECEFF4', '#138808']}
+            />
+
+            <RangeGaugeComponent
+                value={4}
+                minValue={0}
+                maxValue={5}
+                currentValueText="Pollen Level"
+                // segments={3}
+                // segmentColors={['#FF9933', '#ECEFF4', '#138808']}
+            />
         </div>
     )
 }
