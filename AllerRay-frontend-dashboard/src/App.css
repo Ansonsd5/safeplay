@@ -1,0 +1,26 @@
+@import './colors.css';
+
+.App {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}

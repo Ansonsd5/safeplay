@@ -1,0 +1,24 @@
+@import '../../colors.css';
+
+.dashboard {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.row-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.left-container, .right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

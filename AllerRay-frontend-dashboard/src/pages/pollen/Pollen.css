@@ -1,0 +1,36 @@
+.background-section {
+  background-color: #e0f0ff;
+  color: #000; 
+}
+ 
+.title-section {
+  position: relative;
+  color: #000;
+  overflow: hidden;
+  height: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/pollen-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.5; 
+  z-index: 1;
+}
+
+.title-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+  
